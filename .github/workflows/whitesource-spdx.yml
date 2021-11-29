@@ -1,6 +1,6 @@
 name: WhiteSource scan and SPDX report
 
-on:
+on: 
   push:
     branches: []
 
