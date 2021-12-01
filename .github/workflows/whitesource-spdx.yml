@@ -47,7 +47,8 @@ jobs:
             echo === Installing WhiteSource SBOM Generator ===
             pip install ws_sbom_generator
             echo === Installing SPDX tools ====
-            pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl
+            #pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl
+            pip install spdx-tools==0.7.0a3
             echo === Generating SBOM ===
             ws_sbom_generator -u ${{secrets.USERKEY}} -k ${{secrets.APIKEY}} -s $WS_PROJECTTOKEN -a $WS_URL -t tv -o ./whitesource-spdx
 
