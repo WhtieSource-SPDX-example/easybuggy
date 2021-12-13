@@ -44,9 +44,9 @@ jobs:
             export WS_URL=$(echo $WS_WSS_URL | awk -F "agent" '{print $1}')
             echo WS_URL: $WS_URL
             echo === Installing WhiteSource SBOM Generator ===
-            pip  install ws_sbom_generator
+            pip  install ws-sbom-generator
             echo === Generating SBOM ===
-            ws-sbom-generator -u ${{secrets.USERKEY}} -k ${{secrets.APIKEY}} -s $WS_PROJECTTOKEN -a $WS_URL -t tv -o ./whitesource-spdx
+            ws_sbom_generator -u ${{secrets.USERKEY}} -k ${{secrets.APIKEY}} -s $WS_PROJECTTOKEN -a $WS_URL -t tv -o ./whitesource-spdx
 
       - name: Publish WhiteSource SPDX Report
         uses: actions/upload-artifact@master
