@@ -1,4 +1,4 @@
-name: WhiteSource scan and SPDX report 
+name: WhiteSource scan and SPDX report
 
 on: 
   push:
